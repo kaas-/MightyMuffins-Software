@@ -1,0 +1,17 @@
+#N canvas 1199 238 450 300 10;
+#X obj 112 75 / 40;
+#X obj 30 112 10;
+#X obj 91 189 pow;
+#X obj 67 74 b;
+#X obj 93 245 outlet;
+#X obj 91 29 inlet;
+#X text 5 0 A = 10^(dBGain/40);
+#X text 130 28 takes dBGain as input;
+#X text 141 244 sends A as output;
+#X connect 0 0 2 1;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 3 0 1 0;
+#X connect 5 0 0 0;
+#X connect 5 0 3 0;

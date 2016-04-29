@@ -1,4 +1,4 @@
-#N canvas 0 0 590 505 10;
+#N canvas 504 146 590 505 10;
 #X obj -192 185 * 2;
 #X floatatom -192 217 5 0 0 0 - - -;
 #X obj -77 111 b;
@@ -14,11 +14,13 @@
 #X text 52 52 Q;
 #X text -265 -11 alpha calculation (sin(w0) / 2Q);
 #X text 76 314 alpha;
-#X text -191 58 w0 (2PI * (f0/44100));
+#X text -188 55 w0 (2PI * (f0/44100));
 #X obj 36 348 outlet;
 #X obj -192 76 inlet;
 #X obj 51 71 inlet;
 #X obj -125 146 3.14159;
+#X text -153 75 takes f0 as input;
+#X text 88 71 takes Q as input;
 #X connect 0 0 1 0;
 #X connect 1 0 7 0;
 #X connect 2 0 9 0;
