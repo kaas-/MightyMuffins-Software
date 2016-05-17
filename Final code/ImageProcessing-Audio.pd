@@ -1,0 +1,96 @@
+#N canvas 798 87 854 822 10;
+#X obj -318 -18 gemwin;
+#X msg -355 -69 1;
+#X msg -357 -33 0;
+#X msg -362 21 create;
+#X msg -364 72 destroy;
+#X obj 211 47 gemhead;
+#X obj 228 82 pix_image;
+#X obj 230 115 pix_draw;
+#X msg 305 40 open pic/test1.jpg;
+#X msg 315 76 open pic/test2.jpg;
+#X msg 332 113 open pic/test3.jpg;
+#X obj 63 342 pix_data;
+#X obj 307 310 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 305 344 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 18 509 5 0 0 0 - - -;
+#X obj 55 444 unpack 0 0 0;
+#X floatatom 69 508 5 0 0 0 - - -;
+#X floatatom 133 510 5 0 0 0 - - -;
+#X obj 62 301 bang;
+#X obj 73 565 +~;
+#X obj 48 592 +~;
+#X obj 48 622 *~ 250;
+#X obj 106 16 pix_dump;
+#X obj 32 155 print DATA;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array array1 100 float 1;
+#A 0 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608 0.219608
+0.219608 0.219608 0.219608 0.219608 0.219608;
+#X coords 0 1 99 -1 200 140 1 0 0;
+#X restore -261 283 graph;
+#X msg 24 -4 bang;
+#X obj -90 51 unpack;
+#X obj -199 83 route;
+#X obj -86 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj -292 191 tabwrite array1;
+#X obj -296 129 metro 40;
+#X obj -134 162 f;
+#X obj -84 168 + 1;
+#X obj -128 195 mod 100;
+#X floatatom -128 233 5 0 0 0 - - -;
+#X floatatom -301 160 5 0 0 0 - - -;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 11 1;
+#X connect 6 0 22 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 11 1 15 0;
+#X connect 12 0 11 2;
+#X connect 12 0 18 0;
+#X connect 13 0 18 0;
+#X connect 13 0 11 3;
+#X connect 14 0 20 0;
+#X connect 15 0 14 0;
+#X connect 15 1 16 0;
+#X connect 15 2 17 0;
+#X connect 16 0 19 0;
+#X connect 17 0 19 1;
+#X connect 18 0 11 0;
+#X connect 19 0 20 1;
+#X connect 20 0 21 0;
+#X connect 22 0 7 0;
+#X connect 22 1 23 0;
+#X connect 22 1 26 0;
+#X connect 22 1 27 0;
+#X connect 22 1 29 0;
+#X connect 22 1 35 0;
+#X connect 25 0 22 0;
+#X connect 28 0 30 0;
+#X connect 30 0 31 0;
+#X connect 30 0 35 0;
+#X connect 31 0 32 0;
+#X connect 31 0 33 0;
+#X connect 32 0 31 1;
+#X connect 33 0 34 0;
+#X connect 34 0 29 1;
+#X connect 35 0 29 0;
